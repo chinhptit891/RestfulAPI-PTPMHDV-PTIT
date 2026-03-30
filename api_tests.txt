@@ -1,0 +1,29 @@
+### API DEMO & TESTS
+# Copy and run these in terminal (CMD/PowerShell)
+
+# 1. Register User (Nguyen Van A)
+curl -X POST http://localhost:8080/btl/api/nguoidung/dangky -H "Content-Type: application/json" -d "{\"tenDangNhap\": \"test01\", \"matKhau\": \"123456\", \"hoTen\": \"Nguyen Van A\", \"soDienThoai\": \"0912345678\"}"
+
+# 2. Login
+curl -X POST http://localhost:8080/btl/api/nguoidung/dangnhap -H "Content-Type: application/json" -d "{\"tenDangNhap\": \"test01\", \"matKhau\": \"123456\"}"
+
+# 3. Add Brand (Apple)
+curl -X POST http://localhost:8080/btl/api/hang -H "Content-Type: application/json" -d "{\"tenHang\": \"Apple\"}"
+
+# 4. Get All Brands
+curl -X GET http://localhost:8080/btl/api/hang
+
+# 5. Add Phone (iPhone 15)
+curl -X POST http://localhost:8080/btl/api/dienthoai -H "Content-Type: application/json" -d "{\"idHang\": 1, \"tenDienThoai\": \"iPhone 15\", \"gia\": 22000000, \"moTa\": \"Sieu pham chip A16\", \"anhDaiDien\": \"iphone15.png\"}"
+
+# 6. Get All Phones
+curl -X GET http://localhost:8080/btl/api/dienthoai
+
+# 7. Get Phone Details (ID = 1)
+curl -X GET http://localhost:8080/btl/api/dienthoai/1
+
+# 8. Create Order
+curl -X POST http://localhost:8080/btl/api/donhang -H "Content-Type: application/json" -d "{\"idNguoiDung\": 1, \"idDienThoai\": 1, \"tongTien\": 22000000, \"trangThai\": \"Moi dat\"}"
+
+# 9. Get User Orders (User ID = 1)
+curl -X GET http://localhost:8080/btl/api/donhang/nguoidung/1

@@ -1,0 +1,193 @@
+{
+    "info": {
+        "name": "API Quan Ly Dien Thoai",
+        "description": "Bo test API cho he thong quan ly cua hang dien thoai di dong",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Hang",
+            "item": [
+                {
+                    "name": "Lay tat ca hang",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/hang",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "hang"]
+                        }
+                    }
+                },
+                {
+                    "name": "Them hang",
+                    "request": {
+                        "method": "POST",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"tenHang\": \"Nokia\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/hang",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "hang"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Dien Thoai",
+            "item": [
+                {
+                    "name": "Lay tat ca dien thoai",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/dienthoai",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "dienthoai"]
+                        }
+                    }
+                },
+                {
+                    "name": "Them dien thoai dien thoai",
+                    "request": {
+                        "method": "POST",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"idHang\": 1,\n  \"tenDienThoai\": \"iPhone 16 Pro\",\n  \"gia\": 35000000,\n  \"moTa\": \"Test dien thoai moi\",\n  \"anhDaiDien\": \"linkanh\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/dienthoai",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "dienthoai"]
+                        }
+                    }
+                },
+                {
+                    "name": "Cap nhat dien thoai",
+                    "request": {
+                        "method": "PUT",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"idHang\": 1,\n  \"tenDienThoai\": \"iPhone 16 Pro Max\",\n  \"gia\": 40000000,\n  \"moTa\": \"Cap nhat mo ta\",\n  \"anhDaiDien\": \"linkanh\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/dienthoai/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "dienthoai", "1"]
+                        }
+                    }
+                },
+                {
+                    "name": "Xoa dien thoai",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/dienthoai/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "dienthoai", "1"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Nguoi Dung",
+            "item": [
+                {
+                    "name": "Dang ky",
+                    "request": {
+                        "method": "POST",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"tenDangNhap\": \"testuser\",\n  \"matKhau\": \"123456\",\n  \"hoTen\": \"Nguoi Dung Test\",\n  \"soDienThoai\": \"0900000000\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/nguoidung/dangky",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "nguoidung", "dangky"]
+                        }
+                    }
+                },
+                {
+                    "name": "Dang nhap",
+                    "request": {
+                        "method": "POST",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"tenDangNhap\": \"testuser\",\n  \"matKhau\": \"123456\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/nguoidung/dangnhap",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "nguoidung", "dangnhap"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Don Hang",
+            "item": [
+                {
+                    "name": "Luu don hang",
+                    "request": {
+                        "method": "POST",
+                        "header": [{"key": "Content-Type", "value": "application/json"}],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"idNguoiDung\": 1,\n  \"idDienThoai\": 2,\n  \"tongTien\": 28000000,\n  \"trangThai\": \"Cho Xu Ly\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/donhang",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "donhang"]
+                        }
+                    }
+                },
+                {
+                    "name": "Lay don theo nguoi dung",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/btl-1.0-SNAPSHOT/api/donhang/nguoidung/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["btl-1.0-SNAPSHOT", "api", "donhang", "nguoidung", "1"]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
